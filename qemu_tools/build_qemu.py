@@ -69,8 +69,13 @@ def build_qemu(source_dir):
                  "docker_builder"],
         error_message="sudo docker build failed: ")
 
-    run(command=["sudo", "docker", "rm", "qemu_build_output"],
-        error_message="sudo docker rm failed: ")
+    try:
+        run(command=["sudo", "docker", "rm", "qemu_build_output"],
+            error_message="sudo docker rm failed: ")
+    except QemuInstallerError:
+        # It's fine if this fails due to the image not existing
+        # on first attempt
+        pass
 
     run(command=["sudo", "docker", "create", "--name", "qemu_build_output",
                  "qemu_build"],
