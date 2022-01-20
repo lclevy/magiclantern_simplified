@@ -17,4 +17,8 @@ ML is being developed by photo and video enthusiasts, adding
 functionality such as: HDR images and video, timelapse, motion
 detection, focus assist tools, manual audio controls much more.
 
+Is it safe?
+No. Magic Lantern was created by reverse engineering an undocumented system that controls hardware. Therefore, we can't be certain that it's 100% safe. 
+You are running it on your own risk.
+
 For more details on Magic Lantern please see [http://www.magiclantern.fm/](http://www.magiclantern.fm/)
